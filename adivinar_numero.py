@@ -1,16 +1,20 @@
+# programa para adivinar un número
+
 import random
 
-min = 50
-max = 100
+print("-------------------------------------")
+print("-------- ADIVINA EL NÚMERO ----------")
+print("-------------------------------------")
 
-numero_secreto = random.choice(range(min,max))
+MIN = 50
+MAX = 100
 
+numero_secreto = random.choice(range(MIN,MAX))
 max_intentos = 3
-
 num_intentos = 0
 
 while True:
-    intento = int(input("\nAdivina el número:"))
+    intento = int(input(f"\nAdivina un número entre {MIN} y {MAX}: "))
     num_intentos += 1
     
     if intento==numero_secreto:
